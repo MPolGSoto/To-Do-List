@@ -1,0 +1,190 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 37.5rem; /* 600px */
+  margin: 2rem auto;
+  background-color: #fff;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.task-input,
+.priority-select,
+.add-btn {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.add-btn,
+.common-btn {
+  padding: 1rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover,
+.common-btn:hover {
+  background-color: #45a049;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 1rem; /* Ajusta según tus preferencias */
+}
+
+@media screen and (max-width: 600px) {
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .common-btn {
+    margin-bottom: 1rem; /* Espaciado entre los botones en la versión móvil */
+  }
+
+  .task-columns {
+    flex-direction: column;
+  }
+
+  .task-column {
+    margin-bottom: 2rem;
+    display: flex; /* Hace que la columna de importantes aparezca por defecto */
+  }
+
+  .task-column:not(.active) {
+    display: none;
+  }
+
+  #toggleColumnsBtn {
+    display: inline-block; /* Muestra el botón de cambiar columna en dispositivos móviles */
+  }
+}
+
+#toggleColumnsBtn {
+  display: none; /* Oculta el botón de cambiar columna en dispositivos de escritorio */
+}
+
+.task-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-column {
+  flex: 1;
+  margin: 0 1rem;
+  border: 1px solid transparent; /* Bordes transparentes inicialmente */
+  border-radius: 0.5rem;
+}
+
+.task-column h2 {
+  text-align: center;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: #fff;
+  border: 1px solid #ddd; /* Bordes ahora visibles */
+  border-radius: 0.5rem;
+}
+
+.task-item.normal {
+  border-color: #3498db;
+}
+
+.task-item.importante {
+  border-color: #e74c3c;
+  font-weight: bold;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-btn {
+  background-color: #ff5555;
+  color: #fff;
+  border: none;
+  padding: 0.3125rem 0.625rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #ff0000;
+}
+
+.toggle-all-container {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.toggle-all-btn {
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-all-btn:hover {
+  background-color: #45a049;
+}
+
+@media screen and (max-width: 37.5rem) {
+  .container {
+    max-width: 100%;
+  }
+
+  .task-columns {
+    flex-direction: column;
+  }
+
+  .task-column {
+    margin-bottom: 2rem;
+  }
+
+  #toggleColumnsBtn {
+    display: none; /* Oculta el botón de cambiar columna en dispositivos móviles */
+  }
+}
+ footer {
+  text-align: center;
+ }

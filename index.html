@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Lista de Tareas</title>
 </head>
 <body>
+  <header>
+    <h1>Lista de Tareas</h1>
+  </header>
 
-    <div class="container">
-        <h1>Lista de Tareas</h1>
+  <main class="container">
+    <form id="taskForm">
+      <input type="text" id="taskInput" class="task-input" placeholder="Escribe tu tarea..." maxlength="50" required>
+      <select id="prioritySelect" class="priority-select">
+        <option value="normal">Normal</option>
+        <option value="importante">Importante</option>
+      </select>
+      <button type="submit" id="addBtn" class="add-btn">Añadir Tarea</button>
+    </form>
 
-        <form id="taskForm">
-            <label for="taskText">Tarea:</label>
-            <input type="text" id="taskText" maxlength="50" required>
-            
-            <label for="priority">Prioridad:</label>
-            <select id="priority">
-                <option value="normal">Normal</option>
-                <option value="importante">Importante</option>
-            </select>
-            
-            <button type="button" onclick="addTask()">Añadir Tarea</button>
-        </form>
-
-        <div id="taskList"></div>
-
-        <button type="button" onclick="clearCompletedTasks()">Limpiar Tareas Completadas</button>
+    <div class="button-container">
+      <button type="button" id="toggleAllBtn" class="common-btn">Marcar/Desmarcar Todas</button>
+      <button type="button" id="clearCompletedBtn" class="common-btn">Limpiar Tareas Completadas</button>
+      <button id="toggleColumnsBtn" class="common-btn">Cambiar Columna</button>
     </div>
 
+    <article class="task-columns">
+      <section class="task-column" id="normalTasks">
+        <h2>Normal</h2>
+        <ul class="task-list" id="normalTasksList"></ul>
+      </section>
+      <section class="task-column" id="importantTasks">
+        <h2>Importante</h2>
+        <ul class="task-list" id="importantTasksList"></ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>MPolGSoto</footer>
+
     <script src="script.js"></script>
+    
 </body>
 </html>
