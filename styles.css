@@ -64,7 +64,7 @@ form {
   }
 
   .common-btn {
-    margin-bottom: 1rem; /* Espaciado entre los botones en la versión móvil */
+    margin-bottom: 1rem; /* Espacio entre los botones en la versión móvil */
   }
 
   .task-columns {
@@ -73,20 +73,8 @@ form {
 
   .task-column {
     margin-bottom: 2rem;
-    display: flex; /* Hace que la columna de importantes aparezca por defecto */
+    display: block;
   }
-
-  .task-column:not(.active) {
-    display: none;
-  }
-
-  #toggleColumnsBtn {
-    display: inline-block; /* Muestra el botón de cambiar columna en dispositivos móviles */
-  }
-}
-
-#toggleColumnsBtn {
-  display: none; /* Oculta el botón de cambiar columna en dispositivos de escritorio */
 }
 
 .task-columns {
@@ -168,23 +156,6 @@ form {
   background-color: #45a049;
 }
 
-@media screen and (max-width: 37.5rem) {
-  .container {
-    max-width: 100%;
-  }
-
-  .task-columns {
-    flex-direction: column;
-  }
-
-  .task-column {
-    margin-bottom: 2rem;
-  }
-
-  #toggleColumnsBtn {
-    display: none; /* Oculta el botón de cambiar columna en dispositivos móviles */
-  }
-}
- footer {
+footer {
   text-align: center;
- }
+}
