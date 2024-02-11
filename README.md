@@ -24,4 +24,4 @@ Proyecto de recuperación HAB
 
 ## Autor
 
-[Nombre del Autor]
+MPolGsoto
